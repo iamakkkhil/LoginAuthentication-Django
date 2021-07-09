@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block title %}Password{% endblock title%}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form method="POST" class="box">
+                {% csrf_token %}
+                    <h1>Enter Password</h1>
+
+                    {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                            <strong>{{ message }}</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    <input type="password" name="password1" id="password1" placeholder="Enter Password" required> 
+                    <input type="password" name="password2" id="password2" placeholder="Re-enter Password to confirm" required> 
+                    <input type="submit" name="" value="Submit" href="#">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

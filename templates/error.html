@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block title %}Error{% endblock title%}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="box">
+                    <h1>Error</h1>
+                    {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                            <strong>{{ message }}</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                
+                    <p></p>
+                    <p>Something went wrong!</p>
+                    <input type="submit" onclick="location.href='/signup';" name="" value="Back to SignUp">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
