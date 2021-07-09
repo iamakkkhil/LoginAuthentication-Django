@@ -168,28 +168,30 @@ def reset(request, token):
             new_password = request.POST.get('password1')
             confirm_password = request.POST.get('password2')
 
-            if new_password != confirm_password:
+            if new_password == confirm_password:
+                # print(confirm_password)
+
+                profile_obj = Profile.objects.filter(auth_token = token).first()
+                
+                if profile_obj is None:
+                    messages.warning(request, "Something went wrong!")
+                    return redirect("/error") 
+
+                user_id = profile_obj.user.id
+
+                if user_id is None:
+                    messages.warning(request, "User not found :(")
+                    return redirect("/login")
+
+                user_obj = User.objects.get(id = user_id)
+                user_obj.set_password(new_password)
+                user_obj.save()
+
+                messages.success(request, "Password updated successfully :)")
+                return redirect("/login")
+
+            else:
                 messages.warning(request, "Passwords doesn't match, enter again")
-            print(confirm_password)
-
-        profile_obj = Profile.objects.filter(auth_token = token).first()
-        
-        if profile_obj is None:
-            messages.warning(request, "Something went wrong!")
-            return redirect("/error") 
-
-        user_id = profile_obj.user.id
-
-        if user_id is None:
-            messages.warning(request, "User not found :(")
-            return redirect("/login")
-
-        user_obj = User.objects.get(id = user_id)
-        user_obj.set_password(new_password)
-        user_obj.save()
-
-        messages.success(request, "Password updated successfully :)")
-        return redirect("/login")
 
 
         # if user_obj:
