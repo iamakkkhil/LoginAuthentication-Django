@@ -1,3 +1,8 @@
+<p align="left">
+<img src="https://forthebadge.com/images/badges/check-it-out.svg" />&nbsp;&nbsp;&nbsp;
+<img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />&nbsp;&nbsp;&nbsp;
+</p>
+
 # Login & SignUp Authentication using Django
 Created a user authentication project which offers functionalities like **user registration, email verification, login, logout and even functionality to update you password** in case you forget it
 
@@ -14,7 +19,7 @@ https://user-images.githubusercontent.com/55273506/125203605-b4218700-e296-11eb-
   <img src="https://img.shields.io/badge/python-FFD43B.svg?&style=for-the-badge&logo=python&logoColor=white" />&nbsp;&nbsp;&nbsp;
   <img src="https://img.shields.io/badge/bootstrap-563d7c.svg?&style=for-the-badge&logo=bootstrap&logoColor=white" />&nbsp;&nbsp;&nbsp;
   <img src="https://img.shields.io/badge/gmail-D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" />&nbsp;&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/MySql-007585.svg?&style=for-the-badge&logo=mysql&logoColor=white" />&nbsp;&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Sqlite-20639B.svg?&style=for-the-badge&logo=sqlite&logoColor=white" />&nbsp;&nbsp;&nbsp;
 </p>
 
 ## Setup :
