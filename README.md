@@ -1,4 +1,11 @@
 # Login & SignUp Authentication using Django
+Created a user authentication project which offers functionalities like **user registration, email verification, login, logout and even functionality to update you password** in case you forget it
+
+
+For a complete walkthrough of this project, you can have a look at this video:
+
+https://user-images.githubusercontent.com/55273506/125203605-b4218700-e296-11eb-994a-875e98e1bbad.mp4
+
 
 
 ## Tech stack:
@@ -33,7 +40,7 @@ PortfolioContact
 
 6. Submit the form to see the results.
 
-## Working Screenshots:
+<br>
 
-
-## [Akhil Bhalerao](https://github.com/iamakkkhil)
+## Author
+### [Akhil Bhalerao](https://github.com/iamakkkhil)
